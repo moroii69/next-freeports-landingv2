@@ -76,7 +76,7 @@ export function CommandMenu() {
               <Package className="mr-2 h-4 w-4" />
               <span>NPM Package</span>
             </CommandItem>
-            <CommandItem onSelect={() => window.open("https://github.com", "_blank")}>
+            <CommandItem onSelect={() => window.open("https://github.com/moroii69", "_blank")}>
               <Github className="mr-2 h-4 w-4" />
               <span>GitHub Repository</span>
             </CommandItem>

@@ -32,61 +32,45 @@ export function Header() {
           <span>next-freeports</span>
         </Link>
 
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </Button>
+        {/* <nav className="hidden md:flex items-center gap-6">
+          <Link
+            href="#features"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Features
+          </Link>
+          <Link
+            href="#demo"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Demo
+          </Link>
+          <Link
+            href="#docs"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Documentation
+          </Link>
+          <Link
+            href="https://www.npmjs.com/package/next-freeports"
+            target="_blank"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            NPM
+          </Link>
+        </nav>
+
+        <div className="hidden md:flex items-center gap-4">
+          <Button variant="outline" size="sm" asChild>
+            <Link href="https://github.com" target="_blank" className="flex items-center gap-2">
+              <Github className="h-4 w-4" />
+              <span>GitHub</span>
+            </Link>
+          </Button>
+          <Button size="sm">Get Started</Button>
+        </div> */}
       </div>
 
-      {/* Mobile menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <nav className="flex flex-col p-4 gap-4">
-            <Link
-              href="#features"
-              className="text-sm font-medium p-2 hover:bg-muted rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Features
-            </Link>
-            <Link
-              href="#demo"
-              className="text-sm font-medium p-2 hover:bg-muted rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Demo
-            </Link>
-            <Link
-              href="#docs"
-              className="text-sm font-medium p-2 hover:bg-muted rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Documentation
-            </Link>
-            <Link
-              href="https://www.npmjs.com/package/next-freeports"
-              target="_blank"
-              className="text-sm font-medium p-2 hover:bg-muted rounded-md"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              NPM
-            </Link>
-            <div className="flex flex-col gap-2 pt-2 border-t">
-              <Button variant="outline" asChild className="justify-center">
-                <Link href="https://github.com" target="_blank" className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
-                  <span>GitHub</span>
-                </Link>
-              </Button>
-              <Button className="justify-center">Get Started</Button>
-            </div>
-          </nav>
-        </div>
-      )}
     </header>
   )
 }
